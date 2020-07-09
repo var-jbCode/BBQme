@@ -2,3 +2,11 @@ This is a small JavaScript App that, given a city, will tell you the best day th
 
 The App used the metaWeather API for the Weather Data.
 https://www.metaweather.com/api/
+
+Contains: 
+BBQmeApp.js
+BBQmeStyle.css
+BBQmeIndex.html
+
+To Run: 
+Download full reposistory and open the BBQmeIndex.html file.
