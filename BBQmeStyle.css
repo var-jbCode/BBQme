@@ -1,79 +1,137 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: teal;
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6
-;
-    }
-    #footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height:100px;
-    width: 100%;
-    text-align: center;
-    color: yellow;
-    display: table-row;
-    }
-    .wrapper {
-    text-align: center;
-    }
-    .button {
-    position: absolute;
-    top: 50%;
-    }
-    .big{
-    text-align: center;
-    color: yellow;
-    font-weight: bold;
-    }
-    .title{
-    font-size: x-large;
-    text-align: center;
-    color: yellow;
-    } 
-    .weathers{
-    font-size: normal;
-    text-align: center;
-    color: aqua;
-    font-weight: bold;
-    }
-    .buttons{
-    text-align: center;
-    color: teal;
-    border-radius: 5px;
-    border: yellow 1px solid;
-    cursor: pointer;
-    text-decoration: none;
-    }
+html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.6;
+	background-image: url(./whitecoal.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 
-    .buttons:hover{
-        color: black;
-    }
-    .container {
-    display: flex;
-    }
-    .container > article {
-    flex: 1; /*grow*/
-    }
-    .days {
-    color: yellow;
-    }
+.wrapper {
+	text-align: center;
+}
 
-    #footer-link{
-    text-align: center;
-    color: teal;
-    border-radius: 5px;
-    border: yellow 1px solid;
-    background-color: #ffffff;
-    cursor: pointer;
-    text-decoration: none;
-    }
+.button {
+	position: absolute;
+	top: 50%;
+}
 
-    #footer-link:hover{
-        color: gold;
-        background-color: teal;
-    }
+.big {
+	text-align: center;
+	color: slategray;
+	font-weight: bold;
+	background: black;
+	border-radius: 10px;
+	border: 2px solid red;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.title {
+	text-align: center;
+	color: slategray;
+	font-weight: bold;
+	background: black;
+	border-radius: 10px;
+	border: 2px solid red;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.first-lines {
+	text-align: center;
+	color: slategray;
+	font-weight: bold;
+	background: black;
+	border-radius: 10px;
+	border: 2px solid red;
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	margin-top: 200px;
+}
+
+.float-child {
+	color: red;
+	font-weight: bold;
+	background: black;
+	border-radius: 10px;
+	border: 2px solid red;
+	border-radius: 10px;
+	margin: 20px;
+}
+
+.buttons {
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	color: slategray;
+	border-radius: 5px;
+	border: 2px solid red;
+	cursor: pointer;
+	text-decoration: none;
+	background: black;
+	font-weight: bold;
+}
+
+.buttons:hover {
+	color: darkred;
+}
+
+.container {
+	display: flex;
+}
+
+.container>article {
+	flex: 1;
+	/*grow*/
+}
+
+.days {
+	color: slategray;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100px;
+	width: 100%;
+	text-align: center;
+	display: table-row;
+}
+
+.author {
+	color: red;
+	background: black;
+	border-radius: 5px;
+	border: 2px solid red;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#footer-link {
+	text-align: center;
+	color: red;
+	border-radius: 5px;
+	border: 2px solid red;
+	;
+	background-color: black;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+#footer-link:hover {
+	color: black;
+	background-color: darkred;
+}
