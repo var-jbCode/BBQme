@@ -11,4 +11,7 @@ BBQmeStyle.css
 index.html
 
 To Run: 
-Download full reposistory and open the BBQmeIndex.html file.
+Download full reposistory and open the index.html file.
+
+Deployed to live web here: 
+https://practical-bhabha-9a60fa.netlify.app/
