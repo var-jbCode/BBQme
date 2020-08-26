@@ -2,16 +2,13 @@ This is a JavaScript App that, given a city, will tell you the best day that wee
 
 The App can then display the Weather for the next 6 days. 
 
-The App used the metaWeather API for the Weather Data.
+The API used the metaWeather API for the Weather Data.
 https://www.metaweather.com/api/
 
 Contains: 
 BBQmeApp.js
 BBQmeStyle.css
 index.html
-
-To Run: 
-Download full reposistory and open the index.html file.
 
 Deployed to live web here: 
 https://practical-bhabha-9a60fa.netlify.app/
