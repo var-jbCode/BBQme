@@ -17,7 +17,6 @@ const DOMStrings = {
 
 //Find WOE ID (Where On Earth ID) for the location input by user
 async function getlocationAW(query) {
-    console.log('starting location request')
     try {
         mode: 'no-cors'
         let result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${query}`)
@@ -41,7 +40,7 @@ async function getweatherAW(woeID) {
         mode: 'no-cors'
         let result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeID}/`)
         let data = await result.json()
-        console.log('got result')
+    
 
         //Get Sky & Temp for our 6 days
         let day0 = [data.consolidated_weather[0].weather_state_name, data.consolidated_weather[0].the_temp, data.consolidated_weather[0].applicable_date]
@@ -128,13 +127,11 @@ convertDateToDay = (APIDate) => {
 
 //Insert "Display Weather Button"
 insertDisplayWeatherBtn = () => {
-    console.log('inserted button')
     markup = `<button class="buttons display" id = "display">Display Weather</button>`
     DOMStrings.afterMain.insertAdjacentHTML('afterbegin', markup)
 }
 
 clearDisplayWeatherBtn = () => {
-    console.log('clearing btn')
     if (document.querySelector('.display')) {
         document.querySelector('.display').remove()
     }
@@ -222,14 +219,12 @@ action = async () => {
     document.querySelector('.column').style.display = 'block'
     clear()
     var input1 = DOMStrings.inputLeft.value;
-    console.log(input1)
     loading()
     //get WOE ID from API
     ID1 = await getlocationAW(input1)
     //get Weather for that WOE ID
     temp_Sky = await getweatherAW(ID1)
     window.globalTemp_Sky = temp_Sky
-    console.log(temp_Sky)
 
     //If temp_Sky entries include Clear or light cloud put them into seperate arrays 
     clearDays = []
@@ -241,14 +236,10 @@ action = async () => {
             lightCloudDays.push(element)
         }
     });
-    console.log(clearDays)
-    console.log(lightCloudDays)
     //put clear days into an array
     allClearDays = [].concat(...clearDays)
-    console.log(allClearDays)
     //put light cloud days into an array
     allLightCloudDays = [].concat(...lightCloudDays)
-    console.log(allLightCloudDays)
 
 
     //Clear Temps 
@@ -258,7 +249,6 @@ action = async () => {
             clearTemps.push(el)
         }
     })
-    console.log(clearTemps)
     //Light Cloud Temps
     lightCloudTemps = []
     allLightCloudDays.forEach(el => {
@@ -266,14 +256,12 @@ action = async () => {
             lightCloudTemps.push(el)
         }
     })
-    console.log(lightCloudTemps)
 
     //find highest temp in each
     highestClearTemp = Math.max(...clearTemps)
     highestLightCloudTemp = Math.max(...lightCloudTemps)
 
-    console.log(highestClearTemp)
-    console.log(highestLightCloudTemp)
+
 
 
     //output highest temp clear day
@@ -285,7 +273,6 @@ action = async () => {
             bestLightCloudDay = element
         }
     });
-    console.log(bestClearDay, bestLightCloudDay)
 
     //output best clear day
     if (bestClearDay) {
@@ -324,7 +311,6 @@ document.addEventListener('keypress', (event) => {
 // on click of dynamicly added display Weather btn then Display Weather
 document.addEventListener('click', (e) => {
     if (e.target && e.target.id === 'display') {
-        console.log(globalTemp_Sky)
         clearWeekWeather()
         insertWeekWeather()
 
