@@ -21,7 +21,6 @@ async function getlocationAW(query) {
         mode: 'no-cors'
         let result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${query}`)
         let location = await result.json()
-        console.log(location)
         let ID = location[0].woeid
         console.log(ID)
         return ID
