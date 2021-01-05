@@ -146,7 +146,7 @@ outputSkyDisplay = (sky) => {
         skySymbol = '🌨️'
     } else if (sky === 'Hail') {
         skySymbol = '🌨️'
-    } else if (sky === 'Thunderstorm') {
+    } else if (sky === 'Thunder') {
         skySymbol = '⛈️'
     } else if (sky === 'Heavy Rain') {
         skySymbol = '🌧️'
