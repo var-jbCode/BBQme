@@ -17,7 +17,7 @@ async function getlocationAW(query) {
   console.log("starting location request");
   try {
     mode: "no-cors";
-    let result = await fetch(`https://api.allorigins.win/raw?url=https://www.metaweather.com/api/location/search/?query=${query}`);
+    let result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/search/?query=${query}`);
     let location = await result.json();
     console.log(location);
     let ID = location[0].woeid;
@@ -33,7 +33,7 @@ async function getlocationAW(query) {
 async function getweatherAW(woeID) {
   try {
     mode: "no-cors";
-    let result = await fetch(`https://api.allorigins.win/raw?url=https://www.metaweather.com/api/location/${woeID}/`);
+    let result = await fetch(`https://cors-anywhere.herokuapp.com/https://www.metaweather.com/api/location/${woeID}/`);
     let data = await result.json();
     console.log(data)
     console.log("got result");
